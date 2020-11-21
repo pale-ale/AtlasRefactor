@@ -59,3 +59,6 @@ void AAtlasRefactorGamemode::PostLogin(APlayerController * NewPlayer){
     Super::PostLogin(NewPlayer);
     ConnectedNetworkControllers.Add(Cast<ARefactorController, APlayerController>(NewPlayer));
 }
+
+void AAtlasRefactorGamemode::OnUnitDied(AUnitBase * Unit){
+}

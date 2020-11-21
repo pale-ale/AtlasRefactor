@@ -11,6 +11,7 @@
 #include "RefactorController.h"
 #include "Resolver.h"
 #include "GameFramework/GameModeBase.h"
+#include "AtlasRefactorGameState.h"
 #include "AtlasRefactorGamemode.generated.h"
 
 USTRUCT(BlueprintType)
@@ -47,6 +48,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void GetResolveTime(ETurnState TurnState, float& ResolveTime);
+
+	UFUNCTION(BlueprintCallable)
+	void OnUnitDied(AUnitBase * Unit);
 
 	UFUNCTION()
 	void QueueResolvables();
